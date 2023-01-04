@@ -102,40 +102,15 @@ function getRandomColor() {
      element.style.background = color
  }
 
-/*
-const board = document.querySelector('#board');
-const colors = ['#EB455F', '#ADA2FF', '#F8F988', '#10A19D', '#A5F1E9']
-const SQUARES_NUMBER = 500;
+function winTheGame() {
+  
+    function kill(){
+        const circle = document.querySelector('.circle')
+        circle.click()
 
-
-for (let i=0; i < SQUARES_NUMBER; i++) {
-    const square = document.createElement('div');
-    square.classList.add('square');
-
-    square.addEventListener('mouseover', () => 
-    setColor(square))
-
-    square.addEventListener('mouseleave', () => 
-    removeColor(square))
-
-    board.append(square)
-
+        if(circle){
+            circle.click()
+        }
+    }
+    setInterval(kill, 42)
 }
-function removeColor(element) {
-    element.style.backgroundColor ='#1d1d1d'
-    element.style.boxShadow=`0 0 2px #000`
-}
-
-
-function setColor (element) {
-    const color =getRandomColor()
-    element.style.backgroundColor = color
-    element.style.boxShadow=`0 0 2px ${color}, 0 0 10px ${color}`
-}
-
-
- function getRandomColor(){
-   const index = Math.floor( Math.random() * colors.length)
-   return colors[index]
- }
-*/
